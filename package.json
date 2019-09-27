@@ -1,34 +1,27 @@
 {
-  "name": "presentation-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "rc-progress": "^2.5.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-hot-keys": "^2.2.0",
-    "react-markdown": "^4.2.2",
-    "react-scripts": "3.1.1"
-  },
+  "name": "Presentation-App",
+  "version": "1.0.0",
+  "description": "Presentation Slides Using React",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node server",
+    "server": "nodemon server"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "author": "vonetta",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/plugin-transform-regenerator": "^7.4.5",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.1.0",
+    "express": "^4.17.1",
+    "express-validator": "^5.3.1",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.15",
+    "request": "^2.88.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.19.1"
   }
 }
