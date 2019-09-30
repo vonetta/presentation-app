@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500&display=swap");
 
-/* https://www.schemecolor.com/technology.php */
-
 body {
   background-color: #dadada;
   margin: 0 5%;
@@ -13,6 +11,9 @@ body {
 }
 h1 {
   font-size: 2rem;
+  text-align: center;
+}
+h3 {
   text-align: center;
 }
 li {
@@ -28,7 +29,6 @@ li {
 }
 
 .navigation-container {
-  /* margin: 0% 5% 1% 5%; */
   display: flex;
   justify-content: space-between;
 }
@@ -53,14 +53,13 @@ li {
 }
 
 .slides-container {
-  background: linear-gradient(165deg, white 85%, #f36b1c 20%);
+  background: linear-gradient(165deg, #ffffff 85%, #f36b1c 20%);
   box-shadow: 1px 1px 5px #000;
   border-radius: 10px;
-  min-height: 65vh;
+  min-height: 70vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  /* margin: 0 5%; */
 }
 
 .slides {
