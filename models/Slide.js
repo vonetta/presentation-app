@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
 
-const SlideSchema = new Schema({
+const slideSchema = new mongoose.Schema({
   text: {
     type: String,
     required: true
   }
 });
 
-module.exports = Slide = mongoose.model("slide", SlideSchema);
+module.exports = mongoose.model("slide", slideSchema);
