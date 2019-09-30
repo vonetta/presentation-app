@@ -5,7 +5,7 @@ import "react-mde/lib/styles/css/react-mde-all.css";
 
 import { createNewSlide } from "./../routes/slideRoutes";
 
-const NewSlide = () => {
+const NewSlide = props => {
   const [value, setValue] = React.useState("");
   const [selectedTab, setSelectedTab] = React.useState("write");
 

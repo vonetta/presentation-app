@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import ReactMde from "react-mde";
 import * as Showdown from "showdown";
 import "react-mde/lib/styles/css/react-mde-all.css";
@@ -18,9 +19,10 @@ const EditSlide = props => {
     tasklists: true
   });
 
-  const edit = val => {
+  const edit = async val => {
     const id = props.history.location.state.val._id;
-    updateSlide(id, val);
+    await updateSlide(id, val);
+    return <Redirect to="/" />;
   };
 
   return (
