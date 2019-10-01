@@ -6,7 +6,7 @@ import { updateSlide } from "./../routes/slideRoutes";
 
 const EditSlide = props => {
   const [currentSlide, setCurrentSlide] = React.useState(
-    !props ? "" : props.history.location.state.val
+    props.history.location.state.val
   );
   const [selectedTab, setSelectedTab] = React.useState("write");
 
@@ -21,10 +21,10 @@ const EditSlide = props => {
     try {
       const id = props.history.location.state.val._id;
       updateSlide(id, val);
-      window.location = "/";
     } catch (e) {
       console.log(e);
     }
+    window.location = "/";
   };
 
   return (
