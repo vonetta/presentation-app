@@ -1,5 +1,5 @@
 {
-  "name": "presentation",
+  "name": "server",
   "version": "1.0.0",
   "description": "Presentation Slides",
   "main": "server.js",
