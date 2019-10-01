@@ -1,4 +1,3 @@
-{
-  "mongoURI": "mongodb+srv://vonetta:vonetta1@cluster0-xxhhl.mongodb.net/presentation-app?retryWrites=true&w=majority",
-  "jwtSecret": "secret"
-}
+// {
+//   "mongoURI": process.env.MONGOURI
+// }

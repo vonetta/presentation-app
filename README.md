@@ -34,6 +34,7 @@ Setting up the Backend
 To set up the backend make sure you command line is in the root presentation app folder
 
 ```
+cd server
 npm install
 nodemon
 ```

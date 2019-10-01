@@ -4,6 +4,7 @@ const path = require("path");
 const { urlencoded, json } = require("body-parser");
 const cors = require("cors");
 const app = express();
+require("dotenv").config();
 
 const slideRoutes = require("./routes/slideRoutes");
 
