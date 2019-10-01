@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router";
 import GridLoader from "react-spinners/GridLoader";
-import Hotkeys from "react-hot-keys";
 import { css } from "@emotion/core";
 import { getAllSlides } from "../routes/slideRoutes";
 import Slide from "./Slide";
@@ -46,22 +45,24 @@ const SlideShow = () => {
       )}
       {!loading && (
         <>
+          <p className="center">
+            To move forward in slides press the 's' or '2' key.
+          </p>
+          <p className="center">
+            To move backward in slides press 'a' or '1' key.
+          </p>
           <Arrows
             slideNum={slideNum}
             slides={slides}
             input={input}
             setInput={setInput}
           />
-          {/* <Hotkeys
-            keyName="a,s,1,2"
-            onKeyDown={keyName => parseArr(keyName)}
-            onKeyUp={parseArr}> */}
+
           <Slide
             markDownString={markDownString}
             slidesLength={slides.length}
             slideNum={slideNum}
           />
-          {/* </Hotkeys> */}
         </>
       )}
     </>

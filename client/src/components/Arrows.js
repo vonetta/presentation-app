@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router";
-
+import Hotkeys from "react-hot-keys";
 const Arrows = ({ slideNum, slides, input, setInput, history }) => {
   const parseArr = val => {
     if (
@@ -28,6 +28,9 @@ const Arrows = ({ slideNum, slides, input, setInput, history }) => {
     }
   };
 
+  const handleKeys = e => {
+    console.log(e.charCode);
+  };
   const edit = val => {
     history.push({
       pathname: "/edit",
@@ -41,10 +44,12 @@ const Arrows = ({ slideNum, slides, input, setInput, history }) => {
           Edit
         </button>
       </section>
-      <section className="arrow-container">
-        <i className="fas fa-arrow-left" onClick={() => parseArr(-1)}></i>
-        <i className="fas fa-arrow-right" onClick={() => parseArr(1)}></i>
-      </section>
+      <Hotkeys keyName="a,s,1,2" onKeyDown={keyName => parseArr(keyName)}>
+        <section className="arrow-container">
+          <i className="fas fa-arrow-left" onClick={() => parseArr(-1)}></i>
+          <i className="fas fa-arrow-right" onClick={() => parseArr(1)}></i>
+        </section>
+      </Hotkeys>
     </div>
   );
 };
