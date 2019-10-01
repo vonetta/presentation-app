@@ -12,7 +12,6 @@ export const getAllSlides = async () => {
 };
 
 export const createNewSlide = async text => {
-  console.log(text);
   try {
     const newSlide = await axios.post(`${url}/api/slide`, { text });
     return newSlide;

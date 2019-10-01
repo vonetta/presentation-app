@@ -1,14 +1,12 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
 import ReactMde from "react-mde";
 import * as Showdown from "showdown";
 import "react-mde/lib/styles/css/react-mde-all.css";
-
 import { updateSlide } from "./../routes/slideRoutes";
 
 const EditSlide = props => {
   const [currentSlide, setCurrentSlide] = React.useState(
-    props.history.location.state.val
+    !props ? "" : props.history.location.state.val
   );
   const [selectedTab, setSelectedTab] = React.useState("write");
 
@@ -19,10 +17,14 @@ const EditSlide = props => {
     tasklists: true
   });
 
-  const edit = async val => {
-    const id = props.history.location.state.val._id;
-    await updateSlide(id, val);
-    return <Redirect to="/" />;
+  const edit = val => {
+    try {
+      const id = props.history.location.state.val._id;
+      updateSlide(id, val);
+      window.location = "/";
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
